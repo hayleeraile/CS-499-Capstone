@@ -3,19 +3,4 @@ This repository contains the original and enhanced versions of my InventoryPRO a
 
 ## Contents
 Currently, there is a folder called OriginalArtifact. This contains the original version prior to enhancements.
-There is also a folder called EnhancedArtifact. This contains the files that I enhanced for MilestoneTwo. 
-
-## Modified Files
-The files that were modified in this assignment were:
-- AddItemActivity.java
-- CreateAccountActivity.java
-- Database.java
-- DeleteItemActivity.java
-- InventoryActivity.java
-- InventoryAdapter.java
-- InventoryItem.java
-- ItemDetailsActivity.java
-- MainActivity.java
-- PermissionsActivity.java
-- UserProfileActivity.java
-- Strings.xml
+There is also a folder called EnhancedArtifact that will contain all of the enhancements throughout the course. 
