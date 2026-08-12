@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/addItem"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    tools:context=".AddItemActivity">
+
+    <!--App name-->
+    <TextView
+        android:id="@+id/companyName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:textColor="@color/primary_dark_blue"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="40dp" />
+
+    <!--Add item message-->
+    <TextView
+        android:id="@+id/addItemMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add_message"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/companyName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <!--Item number-->
+    <TextView
+        android:id="@+id/enterItemNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/item_number"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/addItemMessage"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="50dp" />
+
+    <!--Edit Item number-->
+    <EditText
+        android:id="@+id/editItemNumber"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:hint="@string/edit_item_number"
+        android:inputType="text|number"
+        app:layout_constraintTop_toTopOf="@id/enterItemNumber"
+        app:layout_constraintStart_toEndOf="@id/enterItemNumber"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="8dp" />
+
+    <!--Item Description-->
+    <TextView
+        android:id="@+id/itemDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/item_desc"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/enterItemNumber"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="32dp" />
+
+    <!--Edit Item description-->
+    <EditText
+        android:id="@+id/editItemDescription"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:hint="@string/edit_item_desc"
+        android:inputType="text"
+        app:layout_constraintTop_toTopOf="@id/itemDescription"
+        app:layout_constraintStart_toEndOf="@id/itemDescription"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="8dp" />
+
+    <!--item location-->
+    <TextView
+        android:id="@+id/itemLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/item_loc"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/itemDescription"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="32dp" />
+
+    <!--edit item location-->
+    <EditText
+        android:id="@+id/editItemLocation"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:hint="@string/edit_item_loc"
+        android:inputType="text"
+        app:layout_constraintTop_toTopOf="@id/itemLocation"
+        app:layout_constraintStart_toEndOf="@id/itemLocation"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="8dp" />
+
+    <!--item quantity-->
+    <TextView
+        android:id="@+id/itemQuantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/item_qty"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/itemLocation"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="32dp" />
+
+    <!--edit item quantity-->
+    <EditText
+        android:id="@+id/editItemQuantity"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:hint="@string/edit_item_qty"
+        android:inputType="number"
+        app:layout_constraintTop_toTopOf="@id/itemQuantity"
+        app:layout_constraintStart_toEndOf="@id/itemQuantity"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="8dp" />
+
+    <!--min stock level-->
+    <TextView
+        android:id="@+id/itemStockLevels"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/min_stock_level"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/itemQuantity"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="32dp" />
+
+    <!--edit min stock level-->
+    <EditText
+        android:id="@+id/editItemStockLevel"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:hint="@string/edit_min_stock_level"
+        android:inputType="number"
+        app:layout_constraintTop_toTopOf="@id/itemStockLevels"
+        app:layout_constraintStart_toEndOf="@id/itemStockLevels"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="8dp" />
+
+    <!--linear layout for cancel and add item buttons-->
+    <LinearLayout
+        android:id="@+id/layoutButtons"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/editItemStockLevel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="50dp">
+
+        <Button
+            android:id="@+id/buttonCancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/button_cancel"
+            android:backgroundTint="@color/primary_blue"/>
+
+        <Button
+            android:id="@+id/buttonAddItem"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/button_add_item"
+            android:backgroundTint="@color/primary_blue"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
