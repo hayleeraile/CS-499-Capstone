@@ -147,7 +147,7 @@
             certain portions of the code by placing validation logic into helper methods that were reusable. I also improved user input validation and replaced hard-coded text 
             strings with string resources. These changes demonstrate my ability to provide professional and technical communication through a well-structured and readable code 
             while also showing my ability to look at an existing project and identify possible issues through applying best software engineering practices. </p>
-        <h4>Milestone Reflection</h4>
+        <h4>Enhancement Reflection</h4>
         <p>Reflecting on this process made me realize that there are always going to be opportunities to better yourself on your coding journey. I had, what I thought was a nice 
             first mobile application. Come to find out, it was not written in a very maintainable way and could use some improvements. While reviewing my code, I was able to 
             identify several opportunities where I could enhance it for better overall maintainability and organization.</p>
@@ -181,7 +181,7 @@
         <p>I had intended to demonstrate outcomes two and three for this category. I was able to design and implement new search, sort and filter algorithms that improved the 
             applications functionality. I also demonstrated selecting the appropriate data structures which included separating complete and display inventory list while evaluating 
             the tradeoffs between performance and memory usage. I believe both outcomes were met and have no changes to my current course of action. </p>
-        <h4>Milestone Reflection</h4>
+        <h4>Enhancement Reflection</h4>
         <p>During this enhancement I gained some insight on why selecting the appropriate data structures can improve the overall user experience and functionality of the 
             application. Creating complete and display inventory lists allowed me to perform the different functions like searching, sorting and filtering while maintaining the 
             original list. This was a great way to learn about using multiple algorithms to create a more flexible user experience.</p>
@@ -200,9 +200,43 @@
             structure used by InventoryPRO.
         </p>
 
-        <p>
-            The full narrative for this enhancement will be placed here.
-        </p>
+        <h3>Database Narrative</h3>
+        <h4>Artifact Description and Justification</h4>
+        <p>The artifact that I have chosen to work with is the InventoryPRO app that I created in the CS-360 class. It is an inventory management application that allows a user 
+            to manage their inventory by adding, editing, viewing and deleting items. The application also includes user management, searching/sorting and filtering of the items, 
+            and low inventory level notifications.</p>
+        <p>I chose this application because it demonstrated many of the skills that I have picked up throughout my time in this program. It combined user authentication, SQLite 
+            database management, user interface design, data validation, and the user of Android studio to develop an application all in one. It was a good opportunity to demonstrate 
+            my ability to enhance an existing project instead of trying to build something new from scratch with a limited amount of time.</p>
+        <p>During this enhancement, I was able to strengthen the design of my databases. I felt like it would be best to add a new item history table that records history of each item 
+            based on if a user added the item or updated it and included the date it was updated. This required the design of a relational database structure that used foreign keys, 
+            SQL JOIN queries and updating the application to record and display the history of each item. I also added a logout feature in the user profile section as well as prevented 
+            duplicate history records from being saved if a user saved changes without an actual change. The app’s functionality improved overall after demonstrating these concepts. </p>
+        <p>Before the enhancement, the database only contained the user and items tables that managed user accounts and inventory items. During the enhancement, I added an item_history 
+            table that would allow an audit history report for the inventory items to be displayed. The new table stores the inventory item that is being updated, the user responsible 
+            for the action, the action itself, and the date that the update was made. I created foreign key relationships between  item_history.item_id and items.id. I also created them 
+            with item_history.user_id and users.id as well. I enabled foreign key enforcement to maintain the relationships. I also used NOT NULL constraints for itemID, user ID, the 
+            action and the change date to prevent any incomplete records from being stored. </p>
+        <p>To be able to retrieve the history for an inventory item, I used an INNER JOIN between the item_history table and the users_table using the user ID. The query filters history 
+            records using the ID of the selected item and orders the results by the change data in descending order. Most recent changes will be displayed first along with the username 
+            that made each change. </p>
+        <h4>Course Outcome Alignment</h4>
+        <p>I originally intended to meet outcomes three and five with this enhancement. I was able to meet outcome number three because I was able to identify a problem (tracking what 
+            user modifies which item), evaluate different approaches to the database, and implemented a solution that helped solve this problem. I did create a small security improvement 
+            by adding a logout feature, but I don’t think it was enough to fulfill the outcome five requirement. Instead, I think this enhancement met outcome four. I focused on the 
+            database architecture, relational database design, SQL queries, and implementing an item history that will provide additional value to the application.</p>
+        <p>I considered the performance implications of adding the item history table. Maintaing a table like this requires additional storage due to the number of records that are being 
+            created after each action. But, the history query only pulls records by the selected items ID. I felt like the additional storage and complexity of the query were okay 
+            trade-offs for the ability to track changes to the users inventory. </p>
+        <p>My original plan was to include a migration to the Room library. After evaluating the number of changes that would be required of that plan, I felt better implementing the 
+            audit history feature. I felt that this would better demonstrate the current knowledge that I have of SQLite and kept it under the appropriate scope of the project. Because 
+            of this, I was able to focus on building a practical feature that will only improve the application instead of making my process more complex.</p>
+        <h4>Enhancement Reflection</h4>
+        <p>I learned much more about relational database design during this enhancement. I was able to further my skills create relationships between tables with the use of foreign 
+            keys and SQL JOIN operations. I also got a better understanding of how to design a database around the use of information rather than just storing it. </p>
+        <p>A big issue that I ran into was associating the history of each item with the correct user. When I first tested the program, I ran into the issue of records being duplicated 
+            based on how many users I had. I also encountered the issue of a record being added when the save button was pressed even if nothing was changed. I was able to resolve the 
+            issues by correcting the JOIN conditions that I had and comparing the original item values with the updated values. </p>
     </section>
 
     <section id="artifacts">
