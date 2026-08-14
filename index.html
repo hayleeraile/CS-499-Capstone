@@ -117,9 +117,9 @@
             discussions as well as communicating through project documentation, presentations and written assignments. I also gained knowledge about the importance of 
             communicating with stakeholders and learning their requirements in the process. If a solution does not meet the needs of the people that will be using the 
             software, then is it a true solution?</p>
-        <p>Another important foundation that I have gain is learning about data structures and algorithms. I now consider how data is stored, searched, sorted and 
+        <p>Another important foundation that I have gained is learning about data structures and algorithms. I now consider how data is stored, searched, sorted and 
             processed instead of only focusing on the outcome. I have learned that there are always going to be multiple ways to solve the same problem, but they aren’t 
-            always going to provide the move efficient or scalable solutions. Knowing this has changed the way that I approach my development process because I understand 
+            always going to provide the most efficient or scalable solutions. Knowing this has changed the way that I approach my development process because I understand 
             how important it is to acknowledge the amount of data or complexity of an application.</p>
         <p>Developing databases is another important part of my coursework. Working with relational and nonrelational databases has helped me develop experience that is 
             necessary for storing, retrieving, updating and organizing the data for an application. Database design affects more than where information is stored. The 
@@ -134,7 +134,7 @@
             have changed the way that I think about development by making me question not only if something works as intended, but how it could behave if someone uses it in an unintended way.</p>
 
         <h3>Introduction to the ePortfolio Artifacts</h3>
-        <p>The artifact that I selected for my capstone is InventoryPRO. It is an Android inventory management application that I original developed during my coursework in the 
+        <p>The artifact that I selected for my capstone is InventoryPRO. It is an Android inventory management application that I originally developed during my coursework in the 
             CS-360 class. I chose this application because it provided many opportunities for improvement across the three major categories (software engineering and design, 
             algorithms and data structures and databases). I was able to demonstrate how my abilities have developed since originally creating it.</p>
         <p>The first enhancement that I worked on focused on software design and engineering. The improvements made to the application demonstrate my ability to evaluate an 
@@ -151,6 +151,8 @@
             development that combines problem solving with keeping a thoughtful user experience in mind. Moving forward, I would like to further my skills in front-end development and 
             user interface design as well as software engineering and secure development practices. My ePortfolio shows my progress from where I began and how I improved an existing 
             application into what it is currently using the knowledge that I have gained and the skills that I will continue developing.</p>
+
+        <a class="button" href="https://github.com/hayleeraile/CS-499-Capstone/tree/main" target="_blank">Link to Download Professional Assessment</a>
     </section>
 
     <section id="code-review">
@@ -269,14 +271,14 @@
             user modifies which item), evaluate different approaches to the database, and implemented a solution that helped solve this problem. I did create a small security improvement 
             by adding a logout feature, but I don’t think it was enough to fulfill the outcome five requirement. Instead, I think this enhancement met outcome four. I focused on the 
             database architecture, relational database design, SQL queries, and implementing an item history that will provide additional value to the application.</p>
-        <p>I considered the performance implications of adding the item history table. Maintaing a table like this requires additional storage due to the number of records that are being 
+        <p>I considered the performance implications of adding the item history table. Maintaining a table like this requires additional storage due to the number of records that are being 
             created after each action. But, the history query only pulls records by the selected items ID. I felt like the additional storage and complexity of the query were okay 
             trade-offs for the ability to track changes to the users inventory. </p>
         <p>My original plan was to include a migration to the Room library. After evaluating the number of changes that would be required of that plan, I felt better implementing the 
             audit history feature. I felt that this would better demonstrate the current knowledge that I have of SQLite and kept it under the appropriate scope of the project. Because 
             of this, I was able to focus on building a practical feature that will only improve the application instead of making my process more complex.</p>
         <h4>Enhancement Reflection</h4>
-        <p>I learned much more about relational database design during this enhancement. I was able to further my skills create relationships between tables with the use of foreign 
+        <p>I learned much more about relational database design during this enhancement. I was able to further my skills by creating relationships between tables with the use of foreign 
             keys and SQL JOIN operations. I also got a better understanding of how to design a database around the use of information rather than just storing it. </p>
         <p>A big issue that I ran into was associating the history of each item with the correct user. When I first tested the program, I ran into the issue of records being duplicated 
             based on how many users I had. I also encountered the issue of a record being added when the save button was pressed even if nothing was changed. I was able to resolve the 
