@@ -116,7 +116,7 @@
             software development life cycle which is something that I felt was critical in learning during my program. I got used to interacting with peers through 
             discussions as well as communicating through project documentation, presentations and written assignments. I have also learned that a key to collaborating 
             is making sure that my code is understandable for other developers that may interact with it. Using practices like code reviews, comments that are meaningful 
-            and having clear documentation allows other members of the team to understand why I made the decisions I did.I also gained knowledge about the importance of 
+            and having clear documentation allows other members of the team to understand why I made the decisions I did. I also gained knowledge about the importance of 
             communicating with stakeholders and learning their requirements in the process. If a solution does not meet the needs of the people that will be using the 
             software, then is it a true solution?</p>
         <p>Another important foundation that I have gained is learning about data structures and algorithms. I now consider how data is stored, searched, sorted and 
@@ -132,7 +132,7 @@
             recognize that security is something to consider during all stages of development, not just something you do as a final process. I have gained experience in this 
             by identifying vulnerabilities like input validation, integer operations, memory management, error handling and user authentication. I have also worked with secure 
             coding standards and have learned how established practices and policies can be used to reduce vulnerabilities before becoming a larger problem. The skill of identifying 
-            these issues early on makes it possible to address any design flaws before the application or data can be made at risk.   Learning about 
+            these issues early on makes it possible to address any design flaws before the application or data can be put at risk. Learning about 
             reverse engineering has helped shed light on another perspective by being able to look at software on a lower level to understand its behavior. These experiences 
             have changed the way that I think about development by making me question not only if something works as intended, but how it could behave if someone uses it in an unintended way.</p>
 
@@ -175,7 +175,7 @@
         <h2>Software Design and Engineering</h2>
 
         <p>
-            The focus of his enhancement was to improve the design, maintainability,
+            The focus of this enhancement was to improve the maintainability,
             usability, and overall structure of the application.
         </p>
 
@@ -209,7 +209,7 @@
         <h2>Algorithms and Data Structures</h2>
 
         <p>
-            The focus of this enhancement was to improve how InventoryPRO organizes, filters, searches and process inventory item information. 
+            The focus of this enhancement was to improve how InventoryPRO organizes, filters, searches and processes inventory item information. 
         </p>
 
         <h3>Algorithms and Data Structures Narrative</h3>
@@ -253,7 +253,7 @@
             to manage their inventory by adding, editing, viewing and deleting items. The application also includes user management, searching/sorting and filtering of the items, 
             and low inventory level notifications.</p>
         <p>I chose this application because it demonstrated many of the skills that I have picked up throughout my time in this program. It combined user authentication, SQLite 
-            database management, user interface design, data validation, and the user of Android studio to develop an application all in one. It was a good opportunity to demonstrate 
+            database management, user interface design, data validation, and the use of Android studio to develop an application all in one. It was a good opportunity to demonstrate 
             my ability to enhance an existing project instead of trying to build something new from scratch with a limited amount of time.</p>
         <p>During this enhancement, I was able to strengthen the design of my databases. I felt like it would be best to add a new item history table that records history of each item 
             based on if a user added the item or updated it and included the date it was updated. This required the design of a relational database structure that used foreign keys, 
@@ -265,7 +265,7 @@
             with item_history.user_id and users.id as well. I enabled foreign key enforcement to maintain the relationships. I also used NOT NULL constraints for itemID, user ID, the 
             action and the change date to prevent any incomplete records from being stored. </p>
         <p>To be able to retrieve the history for an inventory item, I used an INNER JOIN between the item_history table and the users_table using the user ID. The query filters history 
-            records using the ID of the selected item and orders the results by the change data in descending order. Most recent changes will be displayed first along with the username 
+            records using the ID of the selected item and orders the results by the change date in descending order. Most recent changes will be displayed first along with the username 
             that made each change. </p>
         <h4>Course Outcome Alignment</h4>
         <p>I originally intended to meet outcomes three and five with this enhancement. I was able to meet outcome number three because I was able to identify a problem (tracking what 
