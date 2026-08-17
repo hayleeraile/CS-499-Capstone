@@ -229,6 +229,12 @@
         <p>I had intended to demonstrate outcomes two and three for this category. I was able to design and implement new search, sort and filter algorithms that improved the 
             applications functionality. I also demonstrated selecting the appropriate data structures which included separating complete and display inventory list while evaluating 
             the tradeoffs between performance and memory usage. I believe both outcomes were met and have no changes to my current course of action. </p>
+        <p>
+            I also feel like I met outcome five in a small way for this enhancement. I took user input and wrapped it in a try/catch for NumberFormatException. This happens before
+            it is parsed which helps to prevent a crash if the user types something non-numeric in the field that requires a numeric entry. I also check the quantity and minimum 
+            stock levels against negative values before they are saved. This helps stop any malformed data from entering the database whether it happen on purpose with mal-intent 
+            or on accident. Another thing that I had added in the original file was the ContextCompat.checkSelfPermission() check. This checks to see if the permission was granted 
+            to send an SMS alert before sending it. </p>
         <h4>Enhancement Reflection</h4>
         <p>During this enhancement I gained some insight on why selecting the appropriate data structures can improve the overall user experience and functionality of the 
             application. Creating complete and display inventory lists allowed me to perform the different functions like searching, sorting and filtering while maintaining the 
