@@ -269,15 +269,21 @@
             that made each change. </p>
         <h4>Course Outcome Alignment</h4>
         <p>I originally intended to meet outcomes three and five with this enhancement. I was able to meet outcome number three because I was able to identify a problem (tracking what 
-            user modifies which item), evaluate different approaches to the database, and implemented a solution that helped solve this problem. I did create a small security improvement 
-            by adding a logout feature, but I don’t think it was enough to fulfill the outcome five requirement. Instead, I think this enhancement met outcome four. I focused on the 
-            database architecture, relational database design, SQL queries, and implementing an item history that will provide additional value to the application.</p>
+            user modifies which item), evaluate different approaches to the database, and implemented a solution that helped solve this problem. </p>
+        <p>For the outcome five, I was initially unsure that I had met it, but upon reviewing, I was able to recognize the security decisions that I had made throughout the enhancement. 
+            I added input validation to the user account creation and profile screens. I did this using email, phone and password validation. For emails I used Patterns.EMAIL_ADDRESS 
+            which ensured that the user was entering a proper email. I also added a phone number digit count validation that verifies the user enters a 10 digit number in either form 
+            xxx-xxx-xxxx or xxxxxxxxxx. For passwords, I added an 8-character minimum password length requirement. I also used parameterized queries with ? for placeholders rather than 
+            concatenating user input into strings which helped protect against SQL injection.  I also created a small security improvement by adding a logout feature. In addition, I 
+            think this enhancement met outcome four. I focused on the database architecture, relational database design, SQL queries, and implementing an item history that will provide 
+            additional value to the application. </p>
         <p>I considered the performance implications of adding the item history table. Maintaining a table like this requires additional storage due to the number of records that are being 
-            created after each action. But, the history query only pulls records by the selected items ID. I felt like the additional storage and complexity of the query were okay 
-            trade-offs for the ability to track changes to the users inventory. </p>
-        <p>My original plan was to include a migration to the Room library. After evaluating the number of changes that would be required of that plan, I felt better implementing the 
-            audit history feature. I felt that this would better demonstrate the current knowledge that I have of SQLite and kept it under the appropriate scope of the project. Because 
-            of this, I was able to focus on building a practical feature that will only improve the application instead of making my process more complex.</p>
+            created after each action. But, the history query only pulls records by the selected items ID. I felt like the additional storage and complexity of the query were okay trade-offs 
+            for the ability to track changes to the users inventory. </p>
+        <p>My original plan was to include a migration to the Room library. After evaluating the number of changes that would be required of that plan, I felt better implementing the audit 
+            history feature. I felt that this would better demonstrate the current knowledge that I have of SQLite and kept it under the appropriate scope of the project. Because of this, 
+            I was able to focus on building a practical feature that will only improve the application instead of making my process more complex. </p>
+
         <h4>Enhancement Reflection</h4>
         <p>I learned much more about relational database design during this enhancement. I was able to further my skills by creating relationships between tables with the use of foreign 
             keys and SQL JOIN operations. I also got a better understanding of how to design a database around the use of information rather than just storing it. </p>
